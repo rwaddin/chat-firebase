@@ -7,7 +7,6 @@ $("#dset").click(function(){
     $(".setting-drop").toggle('1000');
 });
 	
-
 $(document).ready(function(){
     $(".flip").click(function(){
         $(".message-box").show("slide", { direction: "right" }, 10000);
@@ -57,4 +56,12 @@ document.getElementById("logout").addEventListener("click", ()=>{
             })
         }
     })
+})
+
+
+document.getElementById("sendMessage").addEventListener("keydown", (e)=>{
+    if(e.code === "Enter"){
+
+        console.warn(e.code);
+    }
 })
