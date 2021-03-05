@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="shortcut icon" href="../assets/img/bos.png" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
@@ -11,32 +12,36 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-4">
-                <div class="card  mt-4 shadow">
+                <div class="card mt-5 shadow">
                     <div class="card-body">
-                        <h1 class="text-center">Register</h1>
+                        <h1 class="text-center" style="font-variant:small-caps;">Addin.My.Id</h1>
+                        <small>Choose button what you want :)</small>
                         <hr>
                         <form >
-                            <div class="form-group">
-                                <select name="" id="" class="form-control">
-                                    <option value="">Sales</option>
-                                    <option value="">Billing</option>
-                                    <option value="">Teknis</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                              <input type="text" class="form-control" placeholder="Full name" id="nama">
-                            </div>
                             <div class="form-group">
                               <input type="email" class="form-control" placeholder="Enter email" id="email">
                             </div>
                             <div class="form-group">
-                              <textarea id="question" class="form-control" rows="5" placeholder="Enter your question"></textarea>
+                              <input type="password" class="form-control" placeholder="Enter password" id="pwd">
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="button" id="btnLogin" class="btn btn-success">Login</button>
+                            <button type="button" id="btnRegister" class="btn btn-primary">Register</button>
                         </form>
                     </div>
                 </div>
           </div>
-      </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="../assets/js/firebase-init.js"></script>
+
+    <script src="../assets/js/auth.js"></script>
 </body>
 </html>
