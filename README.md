@@ -1,4 +1,4 @@
-# Travis CI Status
+# Build Status
 [![Build Status](https://www.travis-ci.com/rwaddin/chat-firebase.svg?branch=main)](https://www.travis-ci.com/rwaddin/chat-firebase)
 
 # chat-firebase
