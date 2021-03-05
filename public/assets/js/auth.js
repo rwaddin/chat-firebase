@@ -1,15 +1,23 @@
-let auth        = firebase.auth();
-let db          = firebase.database();
 let refUser     = db.ref("users");
-
-const wait = (show = true) => $.LoadingOverlay(show ? "show" :"hide");
+const wait      = (show = true) => $.LoadingOverlay(show ? "show" :"hide");
 
 let email   = document.getElementById("email");
 let pwd     = document.getElementById("pwd") ;
 
 // login
 document.getElementById("btnLogin").addEventListener("click", function(){
-    Swal.fire("Sss")
+    wait();
+    auth.signInWithEmailAndPassword(email.value, pwd.value)
+    .then(({ user })=>{
+        Swal.fire("Yahoo",user.email+ " berhasil login!","success")
+        location.href = window.location.origin+prefix;
+    })
+    .catch((err)=>{
+        Swal.fire("error",err.message,"error")
+    })
+    .finally(()=>{
+        wait(false)
+    })
 })
 
 // register
@@ -37,5 +45,14 @@ document.getElementById("btnRegister").addEventListener("click", ()=>{
         .finally(()=>{
             wait(false);
         })
+    }
+})
+
+auth.onAuthStateChanged((user)=>{
+    if(user){
+        location.href = window.location.origin+prefix;
+        console.warn("in");
+    }else{
+        console.warn("out");
     }
 })

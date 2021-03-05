@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="shortcut icon" href="assets/img/forum.png" type="image/x-icon">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="assets/css/main.css">
@@ -25,7 +27,8 @@
                 </ul>
                 <ul class="flat-icon list-inline text-right d-inline-block float-right">
                 <li> <a href="#"> <i class="fas fa-search"></i> </a> </li> 
-                <li> <a href="#"> <i class="fas fa-ellipsis-v"></i> </a> </li> 
+                <li> <a href="#"> <i class="fas fa-ellipsis-v"></i> </a> </li>
+                <li> <a href="javascript:void(0)" id="logout"> <i class="fa fa-power-off"></i></a></li>
                 </ul>
                 </div>
             
@@ -137,6 +140,16 @@
         </div>
         </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="assets/js/firebase-init.js"></script>
+
     <script src="assets/js/main.js" defer></script>
 </body>
 </html>
