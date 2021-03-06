@@ -13,7 +13,7 @@ document.getElementById("sendMessage").addEventListener("keydown", (e)=>{
             wait(0)
         })
         //e.target.value.trim() = '';
-        //document.getElementsByTagName("form")[0].reset().trim();
+        document.getElementsByTagName("form")[0].reset();
     }
 })
 

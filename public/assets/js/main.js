@@ -28,7 +28,7 @@ auth.onAuthStateChanged((user)=>{
         console.warn("login", user.uid);
     }else{
         console.warn("out");
-        window.location = window.location.origin+"/public/login";
+        window.location = window.location.origin+prefix+"/login";
     }
 })
 
