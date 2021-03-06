@@ -32,12 +32,9 @@ document.getElementById("btnRegister").addEventListener("click", ()=>{
             let uid = user.uid;
 
             // insert to tb ref
-            refUser.set({
-                [uid] : {
-                    email : email.value
-                }
+            db.ref("users/"+uid).set({
+                email : email.value
             });
-            console.warn(newUser);
         })
         .catch((err)=>{
             Swal.fire("error",err.message,"error")
@@ -55,4 +52,8 @@ auth.onAuthStateChanged((user)=>{
     }else{
         console.warn("out");
     }
+})
+
+refUser.on("child_added", (items)=>{
+    console.log("reg add", items.val());
 })

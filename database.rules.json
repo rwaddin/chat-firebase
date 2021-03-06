@@ -1,12 +1,15 @@
 {
   "rules": {
     "users":{
-      ".read": false,
+      ".read": true,
       ".write": true
     },
     "messages":{
-      ".read" : false,
-      ".write": true
+      ".read" : true,
+      "$message_id":{
+        ".write": true,
+        ".validate" : "newData.hasChildren(['message','timestamp','uid']) && newData.child('message').val().length <= 50"
+      }
     }
   }
 }

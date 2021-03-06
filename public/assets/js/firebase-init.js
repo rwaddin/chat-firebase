@@ -13,7 +13,7 @@ firebase.initializeApp(firebaseConfig);
 
 let auth = firebase.auth();
 let db   = firebase.database();
-
+let refMessage = db.ref("messages");
 
 // config url path local / prod
 const prefix = window.location.hostname === "localhost"  ? "/public": "";
