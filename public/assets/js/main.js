@@ -1,5 +1,3 @@
-const wait      = (show = true) => $.LoadingOverlay(show ? "show" :"hide");
-
 $("#attach").click(function(){
     $(".attachement").toggle();
 });
@@ -58,10 +56,3 @@ document.getElementById("logout").addEventListener("click", ()=>{
     })
 })
 
-
-document.getElementById("sendMessage").addEventListener("keydown", (e)=>{
-    if(e.code === "Enter"){
-
-        console.warn(e.code);
-    }
-})

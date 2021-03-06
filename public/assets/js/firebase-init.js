@@ -11,8 +11,9 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-const auth = firebase.auth();
-const db   = firebase.database();
+let auth = firebase.auth();
+let db   = firebase.database();
 
-// config url path
-const prefix = "/public";
+
+// config url path local / prod
+const prefix = window.location.hostname === "localhost"  ? "/public": "";

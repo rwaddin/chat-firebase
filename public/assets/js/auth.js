@@ -9,7 +9,7 @@ document.getElementById("btnLogin").addEventListener("click", function(){
     wait();
     auth.signInWithEmailAndPassword(email.value, pwd.value)
     .then(({ user })=>{
-        Swal.fire("Yahoo",user.email+ " berhasil login!","success")
+        // Swal.fire("Yahoo",user.email+ " berhasil login!","success")
         location.href = window.location.origin+prefix;
     })
     .catch((err)=>{
